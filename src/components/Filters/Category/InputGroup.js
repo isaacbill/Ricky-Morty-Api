@@ -1,10 +1,10 @@
 import React from "react";
 
-const InputGroup = ({ name, changeID, total }) => {
+const InputGroup = ({ name, setID, total }) => {
   return (
     <div className="input-group mb-3">
       <select
-        onChange={(e) => changeID(e.target.value)}
+        onChange={(e) => setID(e.target.value)}
         className="form-select"
         id={name}
       >
