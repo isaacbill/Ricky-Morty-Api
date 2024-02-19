@@ -30,7 +30,7 @@ const Gender = ({ setGender, setPageNumber }) => {
                 name="gender"
                 index={index}
                 key={index}
-                updatePageNumber={setPageNumber}
+                setPageNumber={setPageNumber}
                 task={setGender}
                 items={items}
               />
