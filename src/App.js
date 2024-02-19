@@ -40,7 +40,7 @@ const Home =()=> {
   let [fetchedData, updateFetchedData] = useState([])
   let {info, results} = fetchedData;
  
-  let api =`https://rickandmortyapi.com/api/character/?page=${pageNumber} &name=${search}&status=${status}&gender=${gender}&species=${species}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
   useEffect(()=>{
     (async function(){
       let data = await fetch(api).then((res)=>res.json());
@@ -55,8 +55,6 @@ const Home =()=> {
       <div className="row">
       <div className="col-3">
         <Filters 
-        status= {status}
-        pageNumber= {pageNumber}
         setSpecies={setSpecies} 
         setGender= {setGender} 
         setStatus={setStatus} 

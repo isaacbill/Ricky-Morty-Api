@@ -26,8 +26,8 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="fas fa-bars open text-dark"></span>
-          <span class="fas fa-times close text-dark"></span>
+          <span className="fas fa-bars open text-dark"></span>
+          <span className="fas fa-times close text-dark"></span>
         </button>
         <div
           className="collapse navbar-collapse justify-content-end"
@@ -41,7 +41,7 @@ const Navbar = () => {
               Episodes
             </NavLink>
             <NavLink
-              activeClassName="active"
+              activeclassName="active"
               className="nav-link"
               to="/location"
             >

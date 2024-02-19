@@ -3,7 +3,7 @@ import Status from './Category/Status'
 import Gender from './Category/Gender'
 import Species from './Category/Species'
 
-const Filters = (setStatus, setPageNumber ,setGender, setSpecies) => {
+const Filters = ({setStatus, setPageNumber ,setGender, setSpecies}) => {
   let clear = () => {
     setStatus("");
     setGender("");
@@ -12,18 +12,19 @@ const Filters = (setStatus, setPageNumber ,setGender, setSpecies) => {
     window.location.reload(false);
   };
   return (
-    <div   className='col-lg-3 col-12 mb-5'>
-    <div className='text-center fw-bold fs-4 mb-4'>Filters</div>
-    <div 
-    onClick={clear}
-     style={{cursor: "pointer"}}
-     className='text-center text-primary text-decoration-underline mb-4'>
-       Clear Filters
-       </div>
-       <div className="accordion" id="accordionExample">
+    <div className="col-lg-8 col-12 mb-5">
+      <div className="text-center fw-bold fs-4 mb-2">Filters</div>
+      <div
+        style={{ cursor: "pointer" }}
+        onClick={clear}
+        className="text-primary text-decoration-underline text-center mb-3"
+      >
+        Clear Filters
+      </div>
+      <div className="accordion" id="accordionExample">
         <Status
           setPageNumber={setPageNumber}
-         setStatus={setStatus}
+          setStatus={setStatus}
         />
         <Species
           setPageNumber={setPageNumber}
@@ -35,7 +36,7 @@ const Filters = (setStatus, setPageNumber ,setGender, setSpecies) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Filters
+export default Filters;
