@@ -1,5 +1,5 @@
 import React from 'react'
-import Status from './Category/Status'
+import Status from './Category/status'
 import Gender from './Category/Gender'
 import Species from './Category/Species'
 
